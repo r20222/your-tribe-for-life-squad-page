@@ -1,0 +1,16 @@
+{
+	"id": "squad_a",
+	"type": "SharedSlice",
+	"name": "SquadA",
+	"description": "SquadA",
+	"variations": [
+		{
+			"id": "default",
+			"name": "Default",
+			"docURL": "...",
+			"version": "initial",
+			"description": "Default",
+			"imageUrl": ""
+		}
+	]
+}

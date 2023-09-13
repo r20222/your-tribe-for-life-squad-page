@@ -1,0 +1,26 @@
+{
+  "id": "members",
+  "type": "SharedSlice",
+  "name": "Members",
+  "description": "Members",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "member": {
+          "type": "Link",
+          "config": {
+            "label": "member",
+            "select": "document"
+          }
+        }
+      }
+    }
+  ]
+}
