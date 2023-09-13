@@ -4,7 +4,86 @@ import type * as prismic from '@prismicio/client';
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-interface MemberDocumentData {}
+type HomeDocumentDataSlicesSlice = MembersSlice;
+
+/**
+ * Content for home documents
+ */
+interface HomeDocumentData {
+	/**
+	 * Slice Zone field in *home*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: home.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<HomeDocumentDataSlicesSlice>
+	/**
+	 * Meta Description field in *home*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A brief summary of the page
+	 * - **API ID Path**: home.meta_description
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */;
+	meta_description: prismic.KeyTextField;
+
+	/**
+	 * Meta Image field in *home*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: home.meta_image
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	meta_image: prismic.ImageField<never>;
+
+	/**
+	 * Meta Title field in *home*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: A title of the page used for social media and search engines
+	 * - **API ID Path**: home.meta_title
+	 * - **Tab**: SEO & Metadata
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	meta_title: prismic.KeyTextField;
+}
+
+/**
+ * home document from Prismic
+ *
+ * - **API ID**: `home`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HomeDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+	Simplify<HomeDocumentData>,
+	'home',
+	Lang
+>;
+
+/**
+ * Content for member documents
+ */
+interface MemberDocumentData {
+	/**
+	 * name field in *member*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.name
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	name: prismic.KeyTextField;
+}
 
 /**
  * member document from Prismic
@@ -21,7 +100,76 @@ export type MemberDocument<Lang extends string = string> = prismic.PrismicDocume
 	Lang
 >;
 
-export type AllDocumentTypes = MemberDocument;
+export type AllDocumentTypes = HomeDocument | MemberDocument;
+
+/**
+ * Primary content in *Members → Items*
+ */
+export interface MembersSliceDefaultItem {
+	/**
+	 * member field in *Members → Items*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: members.items[].member
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	member: prismic.ContentRelationshipField;
+}
+
+/**
+ * Default variation for Members Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MembersSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Record<string, never>,
+	Simplify<MembersSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Members*
+ */
+type MembersSliceVariation = MembersSliceDefault;
+
+/**
+ * Members Shared Slice
+ *
+ * - **API ID**: `members`
+ * - **Description**: Members
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MembersSlice = prismic.SharedSlice<'members', MembersSliceVariation>;
+
+/**
+ * Default variation for SquadA Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SquadASliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Record<string, never>,
+	never
+>;
+
+/**
+ * Slice variation for *SquadA*
+ */
+type SquadASliceVariation = SquadASliceDefault;
+
+/**
+ * SquadA Shared Slice
+ *
+ * - **API ID**: `squad_a`
+ * - **Description**: SquadA
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SquadASlice = prismic.SharedSlice<'squad_a', SquadASliceVariation>;
 
 declare module '@prismicio/client' {
 	interface CreateClient {
@@ -32,6 +180,20 @@ declare module '@prismicio/client' {
 	}
 
 	namespace Content {
-		export type { MemberDocument, MemberDocumentData, AllDocumentTypes };
+		export type {
+			HomeDocument,
+			HomeDocumentData,
+			HomeDocumentDataSlicesSlice,
+			MemberDocument,
+			MemberDocumentData,
+			AllDocumentTypes,
+			MembersSlice,
+			MembersSliceDefaultItem,
+			MembersSliceVariation,
+			MembersSliceDefault,
+			SquadASlice,
+			SquadASliceVariation,
+			SquadASliceDefault
+		};
 	}
 }
