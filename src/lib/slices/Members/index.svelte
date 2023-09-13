@@ -1,8 +1,9 @@
 <script>
-	/** @type {import("@prismicio/client").Content.MembersSlice} */
+	import { PrismicImage } from '@prismicio/svelte'
 	export let slice;
 </script>
 
-<section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	Placeholder component for {slice.slice_type} (variation: {slice.variation}) Slices
-</section>
+{#each slice.items as item}
+	<h2>{item.member.data.name}</h2>
+	<p></p>
+{/each}

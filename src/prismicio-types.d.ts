@@ -63,7 +63,7 @@ interface HomeDocumentData {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type HomeDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+export type HomeDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
 	Simplify<HomeDocumentData>,
 	'home',
 	Lang
@@ -83,6 +83,39 @@ interface MemberDocumentData {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	name: prismic.KeyTextField;
+
+	/**
+	 * about field in *member*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.about
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	about: prismic.RichTextField;
+
+	/**
+	 * picture field in *member*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.picture
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	picture: prismic.ImageField<never>;
+
+	/**
+	 * card field in *member*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: member.card
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	card: prismic.LinkField;
 }
 
 /**

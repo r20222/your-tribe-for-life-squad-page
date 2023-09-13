@@ -18,6 +18,31 @@
 					"label": "name",
 					"placeholder": ""
 				}
+			},
+			"about": {
+				"type": "StructuredText",
+				"config": {
+					"label": "about",
+					"placeholder": "",
+					"allowTargetBlank": true,
+					"single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+				}
+			},
+			"picture": {
+				"type": "Image",
+				"config": {
+					"label": "picture",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"card": {
+				"type": "Link",
+				"config": {
+					"label": "card",
+					"placeholder": "",
+					"select": null
+				}
 			}
 		}
 	}
