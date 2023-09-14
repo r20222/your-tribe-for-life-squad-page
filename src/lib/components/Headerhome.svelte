@@ -171,7 +171,7 @@ onMount(() => {
     }
 
     nav {
-        position: absolute;
+        position: fixed;
         bottom: -50em;
         left: 0;
         width: 100%;
