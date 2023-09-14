@@ -1,6 +1,12 @@
-<header>
+<!-- <header>
     <a class="go-back-button" href="/" title="Go back">&#8592; Go back</a>
-</header>
+</header> -->
+
+<script>
+    import Header from '$lib/components/Headerhome.svelte'
+</script>
+
+<Header />
 
 <div class="img-name-center">
     <section class="desktop-img-name-container">
@@ -18,7 +24,12 @@
 
 <a class="visitekaart-link" href="/" title="" target="_blank">Visit profile card &#8594;</a>
 
-<p class="bio">Biography BLablablablalbalblablalblalbla blablalbalblalblalblalblalbaba.</p>
+<div class="bio-desktop-center">
+    <div class="bio-container">
+        <p class="bio">Biography BLablablablalbalblablalblalbla bla bla bla bla bla bla bla blablalbalblalblalblalblalbaba.</p>
+    </div>
+    
+</div>
 
 
 <h2 class="mobile-h2">Naam's skills</h2>
@@ -49,16 +60,22 @@
 
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@300&display=swap');
+
     :global(html){
         background-color: #1F1F1F;
         color:white;
         overflow-x: hidden;
+        font-family: 'Open Sans';
+        background: url('/bg-home.jpg');
     }
     :global(body){
         margin:0rem;
         padding:0rem;
+        
     }
-    header{
+    /* header{
         background-color: black;
         height:70px;
         display: flex;
@@ -71,7 +88,7 @@
         background-color: transparent;
         color:white;
         text-decoration: none;
-    }
+    } */
     picture{
         height: 234px;
         width:100vw;
@@ -164,9 +181,15 @@
             margin-top: 0;
             margin-left:0;
         }
+        .bio-desktop-center{
+            display:flex;
+            justify-content: center;
+        }
+        .bio-container{
+            width:80vw;
+        }
         .bio{
-            /* margin-left:5.1rem; */
-            display: none;
+            margin: 0;
         }
         .squad{
             margin-left:0;
@@ -203,16 +226,13 @@
         h2{
             margin-top:0.8rem;
             padding-left:0;
-            /* margin-left:2rem; */
         }
         .skill-img{
             margin-left: 2.5rem;
         }
         .skill{
-
             width: 80vw;
             height: 10rem;
-
             border-radius:0;
             border-bottom: 1px solid white;
             background-color: transparent;
