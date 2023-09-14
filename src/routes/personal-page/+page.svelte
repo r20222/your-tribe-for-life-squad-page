@@ -69,6 +69,8 @@
         overflow-x: hidden;
         font-family: 'Open Sans';
         background: url('/bg-home.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     :global(body){
         margin:0rem;
@@ -113,6 +115,7 @@
         border-radius: 50px;
         margin-left: 1.1rem;
         margin-top:5rem;
+        text-decoration: none;
     }
     .bio{
         margin: 4rem 3.1rem 2rem 3.1rem;
@@ -219,6 +222,7 @@
             padding: .8rem 2rem;
             font-size: 1.2rem;
             border-radius: 50px;
+            text-decoration: none;
         }
         .mobile-h2{
             display: none;
