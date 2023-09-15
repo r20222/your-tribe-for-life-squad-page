@@ -17,6 +17,21 @@ onMount(() => {
         clearInterval(interval);
     };
 });
+
+onMount(() => {
+    var myArray = [
+    "Roelie Jansen",
+    "Rick Vellinga",
+    "Nazneen Sheikkariem",
+    "Zenit Araya",
+    "Daan Carstens",
+    "Amber v/d Reijden"
+    ];
+
+    var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+
+    // document.body.innerHTML = randomItem;
+});
 </script>
 
 <header class="desktop">
@@ -32,7 +47,7 @@ onMount(() => {
             <i class="fa fa-cog"></i>
         </span>
         <span class="icon">
-            <img src="https://randomuser.me/api/portraits/med/women/75.jpg" alt="" class="student">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/b46ea1130745055.6186c82d0c1d4.png" alt="profile icon" class="student">
         </span>
         <span class="time">{hours}:{minutes}</span>
     </section>
@@ -41,7 +56,7 @@ onMount(() => {
 <header class="mobile">
     <section class="nav">
         <span class="profile-img">
-            <img src="https://randomuser.me/api/portraits/med/women/75.jpg" alt="" class="student">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/b46ea1130745055.6186c82d0c1d4.png" alt="" class="student">
         </span>
         <span class="name">Rick Vellinga</span>
     </section>
