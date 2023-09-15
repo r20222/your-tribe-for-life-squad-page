@@ -1,0 +1,60 @@
+{
+	"id": "member_b",
+	"label": "member_b",
+	"format": "custom",
+	"repeatable": true,
+	"status": true,
+	"json": {
+		"Main": {
+			"uid": {
+				"config": {
+					"label": "UID"
+				},
+				"type": "UID"
+			},
+			"name_b": {
+				"type": "Text",
+				"config": {
+					"label": "name_b",
+					"placeholder": ""
+				}
+			},
+			"about_b": {
+				"type": "StructuredText",
+				"config": {
+					"label": "about_b",
+					"placeholder": "",
+					"allowTargetBlank": true,
+					"single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+				}
+			},
+			"picture_b": {
+				"type": "Image",
+				"config": {
+					"label": "picture_b",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
+			"card_b": {
+				"type": "Link",
+				"config": {
+					"label": "card_b",
+					"placeholder": "",
+					"select": null
+				}
+			},
+			"slices": {
+				"type": "Slices",
+				"fieldset": "Slice Zone",
+				"config": {
+					"choices": {
+						"squad_b": {
+							"type": "SharedSlice"
+						}
+					}
+				}
+			}
+		}
+	}
+}
