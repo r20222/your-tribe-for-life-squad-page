@@ -1,0 +1,7 @@
+<style>
+    :global(*) {
+        
+    }
+</style>
+
+<slot />
