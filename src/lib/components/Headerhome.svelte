@@ -28,7 +28,8 @@ onMount(() => {
     "Amber v/d Reijden"
     ];
 
-    var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+    let randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+    document.getElementById("randomItem").innerHTML = randomItem;
 
     // document.body.innerHTML = randomItem;
 });
@@ -58,7 +59,7 @@ onMount(() => {
         <span class="profile-img">
             <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/b46ea1130745055.6186c82d0c1d4.png" alt="" class="student">
         </span>
-        <span class="name">Rick Vellinga</span>
+        <span id="randomItem" class="name"></span>
     </section>
     <section class="profile">
         <span class="icon">
@@ -131,6 +132,11 @@ onMount(() => {
         color: white;
     }
 
+    .fa-cog:hover, .fa-search:hover {
+        background-color: white;
+        border-radius: 50%;
+    }
+
     /* Mobiel */
     header.mobile {
         display: none;
@@ -193,7 +199,7 @@ onMount(() => {
         height: 80vh;
         border-top-left-radius: 7%;
         border-top-right-radius: 7%;
-        background-color: #1F1F1F;
+        background-color: #121315;
     }
 
     nav .mobile-nav {
