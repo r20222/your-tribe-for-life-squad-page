@@ -132,10 +132,16 @@ onMount(() => {
         color: white;
     }
 
-    .fa-cog:hover, .fa-search:hover {
-        background-color: white;
-        border-radius: 50%;
+    .icon {
+        transition: transform .5s;
     }
+
+    .icon:hover {
+        /* background-color: grey; */
+        border-radius: 50%;
+        transform: scale(1.1);
+    }
+
 
     /* Mobiel */
     header.mobile {

@@ -9,9 +9,7 @@
 <Header />
 
 <div class="container">
-    <section class="game-nav">
-        <SliceZone slices={data.slices} {components}/>        
-    </section>
+    <SliceZone slices={data.slices} {components}/>
 </div>
 
 <style>
