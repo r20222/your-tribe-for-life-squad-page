@@ -1,9 +1,4 @@
-<script>
-    import Header from '$lib/components/Headerhome.svelte'
-</script>
-
 <main>
-    <Header />
     <slot/>
 </main>
 
