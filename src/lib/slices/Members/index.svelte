@@ -17,7 +17,7 @@
 
 <section class="game-nav">
 	{#each slice.items as item, index}
-	<div  class={`game ${index === activeIndex ? 'active' : ''}`} on:click={() => handleClick(index)} on:keydown={(event) => handleKeyPress(event, index)} tabindex="0" >	
+	<div style="background-image: url('{item.member.data.picture.url}');"  class={`game ${index === activeIndex ? 'active' : ''}`} on:click={() => handleClick(index)} on:keydown={(event) => handleKeyPress(event, index)} tabindex="0" >	
 			<span>{item.member.data.name}</span>
 	</div>
 	{/each}    
@@ -52,6 +52,7 @@
 		margin-right: 15px;
 		cursor: pointer;
 		color: white;
+		background: #343434 no-repeat center center / cover;
 		border: 2px solid #576170;
 	}
 
@@ -63,13 +64,19 @@
 		border: 2px solid #576170;
 	}
 
+	.game span {
+		display: none;
+	}
+
 	.active span {
-		/* position: absolute;
+		display: block;
+		position: absolute;
 		color: white;
 		font-size: 1.6em;
 		font-weight: 100;
 		bottom: 10px;
-		right: 160px; */
+		left: 160px;
+		white-space: nowrap;
 	}
 
 	.active-item {
