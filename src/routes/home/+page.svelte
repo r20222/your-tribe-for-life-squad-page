@@ -17,6 +17,10 @@
      .container {
 		max-width: 90%;
 		margin: 0 auto;
+        height: calc(100vh - 135px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 	}
 
     .game-nav {

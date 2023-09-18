@@ -26,11 +26,10 @@
 <section class="info">
 	{#if activeIndex !== -1}
 	<div class="active-item">
-	  <p>{slice.items[activeIndex].member.data.name}</p>
+	  <span>Hello there</span>
+	  <h3>{slice.items[activeIndex].member.data.name}</h3>
+	  <p>General Kenobi</p>
 	</div>
-	<section>
-	  <p>test</p>
-	</section>
   {/if}
 </section>
 
@@ -38,9 +37,13 @@
 
 <style>
 
+	:global(*) {
+		box-sizing: border-box;
+	}
+
 	.game-nav {
         display: flex;
-        margin-bottom: 250px;
+		/* margin-bottom: 250px; */
     }
 	
 	.game {
@@ -81,6 +84,29 @@
 
 	.active-item {
 		color: white;
+	}
+
+	.info {
+		width: 50%;
+		margin-bottom: 3rem;
+	}
+
+	.info .subtitle {
+		font-weight: 300;
+		font-size: 1.2rem;
+		color: white;
+	}
+
+	.info h3 {
+		font-size: 3rem;
+		font-weight: 300;
+		color: white;
+	}
+
+	.info p {
+		font-size: 2rem;
+		font-weight: 300;
+		color: #8f97aa;
 	}
 
 </style>

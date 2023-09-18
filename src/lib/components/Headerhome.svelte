@@ -90,6 +90,9 @@ onMount(() => {
         width: 100%;
         justify-content: space-between;
         padding: 40px;
+        height: 135px;
+        max-height: 135px;
+        min-height: 135px;
     }
 
     header .nav {
