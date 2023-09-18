@@ -44,12 +44,15 @@
 	.game-nav {
         display: flex;
 		/* margin-bottom: 250px; */
+		overflow: hidden;
     }
 	
 	.game {
 		background: linear-gradient(60deg, rgba(16,25,37,1) 0%, rgb(0,0,1) 50%, rgba(16,25,37,1) 100%);
 		width: 100px;
 		height: 100px;
+		min-width: 100px;
+		min-height: 100px;
 		overflow: hidden;
 		border-radius: 20%;
 		margin-right: 15px;
@@ -63,6 +66,8 @@
 		overflow: visible;
 		width: 150px;
 		height: 150px;
+		min-width: 150px;
+		min-height: 150px;
 		position: relative;
 		border: 2px solid #576170;
 	}
@@ -108,5 +113,15 @@
 		font-weight: 300;
 		color: #8f97aa;
 	}
+
+	@media screen and (max-width: 765px) {
+        .game-nav {
+            overflow: scroll;
+    }
+	.active span {
+		display: none;
+	}
+
+    }
 
 </style>
