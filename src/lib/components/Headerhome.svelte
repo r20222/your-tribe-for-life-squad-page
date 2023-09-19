@@ -28,7 +28,8 @@ onMount(() => {
     "Amber v/d Reijden"
     ];
 
-    var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+    let randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+    document.getElementById("randomItem").innerHTML = randomItem;
 
     // document.body.innerHTML = randomItem;
 });
@@ -58,7 +59,7 @@ onMount(() => {
         <span class="profile-img">
             <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/b46ea1130745055.6186c82d0c1d4.png" alt="" class="student">
         </span>
-        <span class="name">Rick Vellinga</span>
+        <span id="randomItem" class="name"></span>
     </section>
     <section class="profile">
         <span class="icon">
@@ -89,6 +90,9 @@ onMount(() => {
         width: 100%;
         justify-content: space-between;
         padding: 40px;
+        height: 135px;
+        max-height: 135px;
+        min-height: 135px;
     }
 
     header .nav {
@@ -130,6 +134,17 @@ onMount(() => {
         font-size: 2rem;
         color: white;
     }
+
+    .icon {
+        transition: transform .5s;
+    }
+
+    .icon:hover {
+        /* background-color: grey; */
+        border-radius: 50%;
+        transform: scale(1.1);
+    }
+
 
     /* Mobiel */
     header.mobile {
@@ -193,7 +208,7 @@ onMount(() => {
         height: 80vh;
         border-top-left-radius: 7%;
         border-top-right-radius: 7%;
-        background-color: #1F1F1F;
+        background-color: #121315;
     }
 
     nav .mobile-nav {
