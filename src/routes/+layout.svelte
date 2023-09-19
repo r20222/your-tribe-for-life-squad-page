@@ -1,7 +1,3 @@
-<style>
-    :global(*) {
-        
-    }
-</style>
+
 
 <slot />

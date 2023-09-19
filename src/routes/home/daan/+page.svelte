@@ -5,11 +5,11 @@
 </script>
 
 <Header />
-    
+
 <div class="container">
     <section class="game-nav">
         <a href="/home">
-            <div class="game active">
+            <div class="game">
                 <i class="fa fa-location-arrow"></i>
             </div>
         </a>
@@ -26,7 +26,9 @@
             <div style="background-image: url('{data.slices[0].items[3].member.data.picture.url}');" class="game"></div>
         </a>
         <a href="/home/{data.slices[0].items[4].member.uid}">
-            <div style="background-image: url('{data.slices[0].items[4].member.data.picture.url}');" class="game"></div>
+            <div style="background-image: url('{data.slices[0].items[4].member.data.picture.url}');" class="game active">
+				<span>{data.slices[0].items[4].member.data.name}</span>
+			</div>
         </a>
         <a href="/home/{data.slices[0].items[5].member.uid}">
             <div style="background-image: url('{data.slices[0].items[5].member.data.picture.url}');" class="game"></div>
@@ -36,7 +38,7 @@
     <section class="info">
         <div class="active-item">
           <span>Hello there</span>
-          <h3>Welkom</h3>
+          <h3>{data.slices[0].items[4].member.data.name}</h3>
           <p>General Kenobi</p>
         </div>
     </section>
@@ -88,7 +90,7 @@
 
     .game i {
         text-decoration: none;
-        font-size: 3.5rem;
+        font-size: 2rem;
     }
 
 	.active {
