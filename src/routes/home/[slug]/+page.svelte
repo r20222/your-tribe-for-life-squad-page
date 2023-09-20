@@ -46,7 +46,7 @@
 			</div>
 		</a>
         <a href="/home/daan">
-            <div class="game">
+            <div class:active={$page.url.pathname === '/home/Daan'} class="game">
 				<span>
 					{data.name}
 				</span>
