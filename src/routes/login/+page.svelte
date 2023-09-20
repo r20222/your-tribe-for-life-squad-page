@@ -1,23 +1,22 @@
 <script>
     export let data
-  </script>
+</script>
 
-    <div>
-       <div class="wave"></div>
-       <div class="wave"></div>
-       <div class="wave"></div>
-       </div>
-       <div class="image">
-       <a href="/login"><img src="icons8-playstation-250.svg" alt="Logo PS5" style="width:120px;height:120px;"></a>
-    </div>
+<div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+ </div>
 
-    <style>
+<div class="person">
+        <div style="background-image: url('');" class="circle"></div>
+        <h1>Zenit</h1>
+  </div>
 
-*{
-margin: 0;
-padding: 0;
-}
 
+
+  <style>
+  
 @keyframes gradient {
     0% {
         background-position: 0% 0%;
@@ -76,18 +75,46 @@ padding: 0;
         transform: translateX(1);
     }
 }
-.image{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: 19rem;
 
-}
-img{
-    border: 2px solid #ddd;
-    border-radius: 50%; 
-    padding: 2px; 
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  aspect-ratio: 1/1;
 }
 
-    </style>
+.circle {
+  background: rgba(255, 255, 255, 0.151);
+  height: 200px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+.person img {
+  position: relative;
+  width: 340px;
+  top: 164px;
+  left: 22px;
+  transform: translateY(20px) scale(1.15);
+  transition: transform 250ms 
+    cubic-bezier(0.4, 0, 0.2, 1);
+}
+.conianer-inner {
+  position: relative;
+  top: -200px;
+}
+
+.person h1 {
+  color: #ffffff;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+.container:hover {
+  transform: scale(0.54);
+} 
+.container:hover img {
+  transform: translateY(0) scale(1.3);
+}
+
+  </style>
