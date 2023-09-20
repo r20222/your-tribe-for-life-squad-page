@@ -1,4 +1,4 @@
-# fdnd playstation squad page 
+# fdnd playstation squad page 🎮
 
 
 
