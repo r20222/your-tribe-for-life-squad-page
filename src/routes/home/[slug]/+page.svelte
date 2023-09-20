@@ -25,35 +25,35 @@
 			</div>
 		</a>
         <a href="/home/rick">
-            <div style="background-image: url('https://images.prismic.io/tribe-squad-page/38ea54da-c8a5-4d91-aef7-05ff0fd3159a_red-panda.jpg?auto=compress,format&quot');" class:active={$page.url.pathname === '/home/rick'} class="game">
+            <div class:active={$page.url.pathname === '/home/rick'} class="game">
 				<span>
 					{data.name}
 				</span>
 			</div>
 		</a>
         <a href="/home/nazneen">
-            <div style="background-image: url('https://images.prismic.io/tribe-squad-page/5c52cca0-145e-4d5b-8b6d-0e71652b741e_penguin.jpg?auto=compress,format&quot');" class:active={$page.url.pathname === '/home/nazneen'} class="game">
+            <div class:active={$page.url.pathname === '/home/nazneen'} class="game">
 				<span>
 					{data.name}
 				</span>
 			</div>
 		</a>
         <a href="/home/zenit">
-            <div style="background-image: url('https://images.prismic.io/tribe-squad-page/f0acf834-f14a-47c0-b16a-d981ac0a8dd3_panda.jpg?auto=compress,format&quot');" class:active={$page.url.pathname === '/home/zenit'} class="game">
+            <div class:active={$page.url.pathname === '/home/zenit'} class="game">
 				<span>
 					{data.name}
 				</span>
 			</div>
 		</a>
         <a href="/home/daan">
-            <div style="background-image: url('https://images.prismic.io/tribe-squad-page/a9fba96d-8357-4efa-971a-cae82eddaf4b_dino.jpg?auto=compress,format&quot');" class:active={$page.url.pathname === '/home/daan'} class="game">
+            <div class="game">
 				<span>
 					{data.name}
 				</span>
 			</div>
 		</a>
         <a href="/home/amber">
-            <div style="background-image: url('https://images.prismic.io/tribe-squad-page/1066af11-b0a9-4eca-bfc7-43f86ef8051a_otter.jpg?auto=compress,format&quot');" class:active={$page.url.pathname === '/home/amber'} class="game">
+            <div class:active={$page.url.pathname === '/home/amber'} class="game">
 				<span>
 					{data.name}
 				</span>
@@ -178,23 +178,23 @@
 	}
 
 	.game-nav a:nth-child(3) .game {
-		background-image: url('https://images.prismic.io/tribe-squad-page/bb5ff495-4017-401f-aff8-9fc9dc977a94_astronaut.jpg?auto=compress,format&quot');
+		background-image: url('https://images.prismic.io/tribe-squad-page/38ea54da-c8a5-4d91-aef7-05ff0fd3159a_red-panda.jpg?auto=compress,format&quot');
 	}
 
-	.game-nav a:nth-child(2) .game {
-		background-image: url('https://images.prismic.io/tribe-squad-page/bb5ff495-4017-401f-aff8-9fc9dc977a94_astronaut.jpg?auto=compress,format&quot');
+	.game-nav a:nth-child(4) .game {
+		background-image: url('https://images.prismic.io/tribe-squad-page/5c52cca0-145e-4d5b-8b6d-0e71652b741e_penguin.jpg?auto=compress,format&quot');
 	}
 
-	.game-nav a:nth-child(2) .game {
-		background-image: url('https://images.prismic.io/tribe-squad-page/bb5ff495-4017-401f-aff8-9fc9dc977a94_astronaut.jpg?auto=compress,format&quot');
+	.game-nav a:nth-child(5) .game {
+		background-image: url('https://images.prismic.io/tribe-squad-page/f0acf834-f14a-47c0-b16a-d981ac0a8dd3_panda.jpg?auto=compress,format&quot');
 	}
 	
-	.game-nav a:nth-child(2) .game {
-		background-image: url('https://images.prismic.io/tribe-squad-page/bb5ff495-4017-401f-aff8-9fc9dc977a94_astronaut.jpg?auto=compress,format&quot');
+	.game-nav a:nth-child(6) .game {
+		background-image: url('https://images.prismic.io/tribe-squad-page/a9fba96d-8357-4efa-971a-cae82eddaf4b_dino.jpg?auto=compress,format&quot');
 	}
 
-	.game-nav a:nth-child(2) .game {
-		background-image: url('https://images.prismic.io/tribe-squad-page/bb5ff495-4017-401f-aff8-9fc9dc977a94_astronaut.jpg?auto=compress,format&quot');
+	.game-nav a:nth-child(7) .game {
+		background-image: url('https://images.prismic.io/tribe-squad-page/1066af11-b0a9-4eca-bfc7-43f86ef8051a_otter.jpg?auto=compress,format&quot');
 	}
 
 	.game-nav a:nth-child(2).game{
