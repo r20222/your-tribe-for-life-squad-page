@@ -9,7 +9,7 @@
 
 <Header />
 
-<section class="squad">
+<!-- <section class="squad">
 	{#each data.slices[0].items as item}
 		<article class="profile">
 			<img
@@ -22,11 +22,34 @@
 			<h1 class="name">{item.squad_b.data.name}</h1>
 		</article>
 	{/each}
+</section> -->
+
+<section class="squad">
+	{#each data.slices[0].items as item}
+		<a href="">
+			<article class="profile">
+				{#if item.squad_b.data.picture}
+					<img
+						src={item.squad_b.data.picture.url}
+						alt="Profile picture of Squad B"
+						width="100"
+						height="100"
+					/>
+				{/if}
+
+				<h1 class="name">{item.squad_b.data.name}</h1>
+			</article>
+		</a>
+	{/each}
 </section>
 
-<style>
-	/* .name {
+<!-- <div>
+	<pre>{JSON.stringify(data, null, 2)}</pre>
+</div> -->
+
+<!-- <style>
+	.name {
 		color: blueviolet;
 		font-size: 3em;
-	} */
-</style>
+	}
+</style> -->
