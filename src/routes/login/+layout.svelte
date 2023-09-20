@@ -3,7 +3,7 @@
 </main>
 
 <style>
-      main {
+main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -14,7 +14,7 @@
 
 }
 @keyframes gradient {
-    0% {
+    3% {
         background-position: 0% 0%;
     }
     50% {
