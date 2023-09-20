@@ -269,7 +269,7 @@ interface SquadBDocumentData {
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type SquadBDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<
+export type SquadBDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
 	Simplify<SquadBDocumentData>,
 	'squad_b',
 	Lang
