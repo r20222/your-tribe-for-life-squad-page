@@ -28,6 +28,7 @@
             <div style="background-image: url('');" class:active={$page.url.pathname === '/home/rick'} class="game">
 				<span>
 					{data.name}
+				</span>
 			</div>
 		</a>
         <a href="/home/nazneen">
