@@ -26,7 +26,7 @@
 
 <section class="squad">
 	{#each data.slices[0].items as item}
-		<a href="">
+		<a href="/gallery/{item.squad_b.uid}">
 			<article class="profile">
 				{#if item.squad_b.data.picture}
 					<img
