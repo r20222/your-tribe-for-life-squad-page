@@ -1,10 +1,14 @@
 <script>
+	import { page } from '$app/stores' ;
     import Header from '$lib/components/Headerhome.svelte'
     export let data
-
 </script>
 
 <Header />
+
+<!-- <pre>
+	{JSON.stringify(data, null, 2)}
+</pre> -->
 
 <div class="container">
     <section class="game-nav">
@@ -13,12 +17,53 @@
                 <i class="fa fa-location-arrow"></i>
             </div>
         </a>
+        <a href="/home/roelie">
+            <div style="background-image: url('');" class:active={$page.url.pathname === '/home/roelie'} class="game">
+				<span>
+					{data.name}
+				</span>
+			</div>
+		</a>
+        <a href="/home/rick">
+            <div style="background-image: url('');" class:active={$page.url.pathname === '/home/rick'} class="game">
+				<span>
+					{data.name}
+			</div>
+		</a>
+        <a href="/home/nazneen">
+            <div style="background-image: url('');" class:active={$page.url.pathname === '/home/nazneen'} class="game">
+				<span>
+					{data.name}
+				</span>
+			</div>
+		</a>
+        <a href="/home/zenit">
+            <div style="background-image: url('');" class:active={$page.url.pathname === '/home/zenit'} class="game">
+				<span>
+					{data.name}
+				</span>
+			</div>
+		</a>
+        <a href="/home/daan">
+            <div style="background-image: url('');" class:active={$page.url.pathname === '/home/daan'} class="game">
+				<span>
+					{data.name}
+				</span>
+			</div>
+		</a>
+        <a href="/home/amber">
+            <div style="background-image: url('');" class:active={$page.url.pathname === '/home/amber'} class="game">
+				<span>
+					{data.name}
+				</span>
+			</div>
+        </a>
     </section>
     
     <section class="info">
         <div class="active-item">
           <span>Hello there</span>
-          <h3></h3>
+          <h3>{data.name}</h3>
           <p>General Kenobi</p>
         </div>
     </section>
@@ -123,6 +168,12 @@
 		font-size: 2rem;
 		font-weight: 300;
 		color: #8f97aa;
+	}
+
+	/* Profiel foto's */
+
+	.game-nav a:nth-child(2).game{
+		background: red !important;
 	}
 
 	@media screen and (max-width: 765px) {
