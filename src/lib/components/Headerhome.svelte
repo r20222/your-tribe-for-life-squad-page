@@ -37,8 +37,8 @@ onMount(() => {
 
 <header class="desktop">
     <section class="nav">
-        <a href="#" class="active">Home</a>
-        <a href="#">Squad B</a>
+        <a href="/home" class="active">Home</a>
+        <a href="/gallery">Squad B</a>
     </section>
     <section class="profile">
         <span class="icon">
