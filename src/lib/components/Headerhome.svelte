@@ -49,7 +49,7 @@ onMount(() => {
             <i class="fa fa-cog"></i>
         </span>
         <span class="icon">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/b46ea1130745055.6186c82d0c1d4.png" alt="profile icon" class="student">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR1QD_rUoj7TkbYnTeHNYJ2-vfmHEcSKhaXa4BY_B3aB27JxXgS" alt="profile icon" class="student">
         </span>
         <span class="time">{hours}:{minutes}</span>
     </section>
@@ -58,7 +58,7 @@ onMount(() => {
 <header class="mobile">
     <section class="nav">
         <span class="profile-img">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/b46ea1130745055.6186c82d0c1d4.png" alt="" class="student">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR1QD_rUoj7TkbYnTeHNYJ2-vfmHEcSKhaXa4BY_B3aB27JxXgS" alt="" class="student">
         </span>
         <span id="randomItem" class="name"></span>
     </section>
