@@ -65,7 +65,7 @@
         <div class="active-item">
           <span>Hello there</span>
           <h3>{data.name}</h3>
-          <p>General Kenobi</p>
+          <p>{data.about[0].text}</p>
         </div>
     </section>
 </div>

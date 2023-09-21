@@ -37,7 +37,7 @@
         <div class="active-item">
           <span>Hello there</span>
           <h3>Welkom</h3>
-          <p>General Kenobi</p>
+          <p>FDND Squad Page</p>
         </div>
     </section>
 </div>
