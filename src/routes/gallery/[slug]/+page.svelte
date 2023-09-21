@@ -1,20 +1,19 @@
-<!-- <header>
-    <a class="go-back-button" href="/" title="Go back">&#8592; Go back</a>
-</header> -->
-
 <script>
     import { page } from '$app/stores' ;
     import Header from '$lib/components/Headerhome.svelte'
+    import DiHtml5 from 'svelte-icons/di/DiHtml5.svelte'
+    import DiCss3 from 'svelte-icons/di/DiCss3.svelte'
+    import DiJavascript1 from 'svelte-icons/di/DiJavascript1.svelte'
     export let data
 </script>
 
 <Header />
-
+<!-- <pre>{JSON.stringify(data, null, 2)}</pre> -->
 
 <div class="img-name-center">
     <section class="desktop-img-name-container">
         <picture class="image-personal-page">
-            <img src="" alt="" title="">
+            <img src="{data.picture.url}" alt="{data.picture.alt}" title="{data.picture.alt}">
         </picture>
         
         <article class="name-squad">
@@ -25,38 +24,46 @@
 </div>
 
 
-<a class="visitekaart-link" href="/" title="" target="_blank">Visit profile card &#8594;</a>
+<a class="visitekaart-link" href="{data.card.url}" title="Visitekaart {data.name}" target="_blank">Visit profile card &#8594;</a>
 
 <div class="bio-desktop-center">
     <div class="bio-container">
-        <p class="bio">Biography BLablablablalbalblablalblalbla bla bla bla bla bla bla bla blablalbalblalblalblalblalbaba.</p>
+        <p class="bio">{data.about[0].text}</p>
     </div>
     
 </div>
 
 
-<h2 class="mobile-h2">Naam's skills</h2>
+<h2 class="mobile-h2">{data.name}'s skills</h2>
 <section class="all-skills">
     <div class="desktop-skills-visiterkaart">
-        <h2>Naam's skills</h2>
-        <a class="desktop-visitekaart-link" href="/" title="" target="_blank">Visit profile card &#8594;</a>
+        <h2>{data.name}'s skills</h2>
+        <a class="desktop-visitekaart-link" href="{data.card.url}" title="Visitekaart {data.name}" target="_blank">Visit profile card &#8594;</a>
     </div>
-    <!-- hier each loop maken voor elke skill 1 div.skill -->
+
     <div class="skill">
-        <img class="skill-img" src="" alt="" title="" width="50" height="50">
-        <h3>Skill name</h3>
-    </div>
-    <div class="skill">
-        <img class="skill-img" src="" alt="" title="" width="50" height="50">
-        <h3>Skill name</h3>
+        <div class="icon-container">
+            <DiHtml5 />
+        </div>
+        <h3>HTML</h3>
     </div>
     <div class="skill">
-        <img class="skill-img" src="" alt="" title="" width="50" height="50">
-        <h3>Skill name</h3>
+        <div class="icon-container">
+            <DiCss3  />
+        </div>
+        <h3>CSS</h3>
     </div>
     <div class="skill">
-        <img class="skill-img" src="" alt="" title="" width="50" height="50">
-        <h3>Skill name</h3>
+        <div class="icon-container">
+            <DiJavascript1 />
+        </div>
+        <h3>JavaScript</h3>
+    </div>
+    <div class="skill">
+        <div class="icon-container">
+            <img class="skills-img-svelte" src="/svelte-logo.svg" alt="Svelte" title="Svelte" width="150" height="150">
+        </div>
+        <h3>Svelte</h3>
     </div>
 </section>
 
@@ -80,20 +87,6 @@
         padding:0rem;
         
     }
-    /* header{
-        background-color: black;
-        height:70px;
-        display: flex;
-        align-items: center;
-    }
-    .go-back-button{
-        border:none;
-        font-size: 1.5rem;
-        margin-left: 1rem;
-        background-color: transparent;
-        color:white;
-        text-decoration: none;
-    } */
     picture{
         height: 234px;
         width:100vw;
@@ -101,11 +94,15 @@
     picture img{
         height:234px;
         width:100vw;
-        background-color: grey;
+        background-color: black;
+        object-fit: contain;
+    }
+    h1{
+        margin-top:2rem;
     }
     h1, .squad{
         margin-left: 3.1rem;
-        line-height:1rem;
+        /* line-height:1rem; */
     }
     .squad{
         margin-bottom:3rem;
@@ -147,10 +144,16 @@
         align-items: center;
         gap: 1rem;
     }
-    .skill-img{
-        margin-left: 2rem;
+    .icon-container{
+        height: 100%;
+        width: 10rem;
+        display: flex;
+        justify-content: center;
     }
-
+    .icon-container .skills-img-svelte{
+        width:4rem;
+        height:4rem;
+    }
     .desktop-skills-visiterkaart{
         display: none;
     }
@@ -234,9 +237,6 @@
             margin-top:0.8rem;
             padding-left:0;
         }
-        .skill-img{
-            margin-left: 2.5rem;
-        }
         .skill{
             width: 80vw;
             height: 10rem;
@@ -244,6 +244,10 @@
             border-bottom: 1px solid white;
             background-color: transparent;
             gap: 8rem;
+        }
+        .icon-container .skills-img-svelte{
+            width:9rem;
+            height:9rem;
         }
         
     }

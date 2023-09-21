@@ -23,6 +23,7 @@
 	"type": "module",
 	"dependencies": {
 		"@prismicio/client": "^7.2.0",
-		"@prismicio/svelte": "^0.1.2"
+		"@prismicio/svelte": "^0.1.2",
+		"svelte-icons": "^2.1.0"
 	}
 }
