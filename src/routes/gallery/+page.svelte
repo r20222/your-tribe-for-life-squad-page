@@ -43,4 +43,7 @@
 		padding: 1em;
 		margin-left: 1.5em;
 	}
+	a {
+		text-decoration: none;
+	}
 </style>
