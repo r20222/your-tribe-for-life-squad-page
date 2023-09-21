@@ -28,7 +28,7 @@
     height: 100vh;
     margin: 0;
     background: linear-gradient(315deg, rgb(3, 5, 53) 3%, rgb(1, 32, 64) 38%, rgb(16, 13, 39) 68%, rgb(5, 10, 51) 98%);
-  
+    font-family: 'Open Sans';
   }
   @keyframes gradient {
       3% {
@@ -41,5 +41,7 @@
           background-position: 0% 0%;
       }
   }
+  
+
   
   </style>

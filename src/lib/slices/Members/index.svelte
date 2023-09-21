@@ -47,6 +47,10 @@
     opacity: 0.9;
 }
 
+a {
+  text-decoration: none;
+}
+
 @keyframes wave {
     2% {
         transform: translateX(1);
