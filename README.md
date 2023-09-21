@@ -1,8 +1,4 @@
 # fdnd playstation squad page 🎮
-
-
-
-
 ## Inhoudsopgave 📚
 
   * [Beschrijving](#beschrijving)
@@ -28,6 +24,7 @@ Live website: https://your-tribe-for-life-squad-page-smoky.vercel.app/
 
 ## Kenmerken ✅
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+Dit project is ontwikkeld met behulp van Sveltekit. De inhoud wordt opgeslagen en uitgelezen via Prismicio. De code wordt gehost op GitHub. De live-versie van de website is beschikbaar op Vercel. Vercel is geïntegreerd met de GitHub Repository en genereert automatisch een nieuwe versie van de applicatie bij elke update op de 'main'-tak
 
 Wij hebben de volgende technieken en technologiën gebruikt:
 
@@ -38,7 +35,16 @@ Wij hebben de volgende technieken en technologiën gebruikt:
 * Figma
 
 ## Installatie ⚙️
+```
+# Cloning the repository
+Open de repo via github desktop
 
+# Install NPM packages
+npm install
+
+# Run local server
+npm run start
+```
 Om in het project te kunnen werken moet je `npm install` doen in de terminal om de node modules te downloaden.
 
 ## Bronnen 🌐
