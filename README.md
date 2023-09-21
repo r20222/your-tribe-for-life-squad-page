@@ -35,6 +35,7 @@ Wij hebben de volgende technieken en technologiën gebruikt:
 * Sveltekit
 * Prismic.io
 * CSS
+* Figma
 
 ## Installatie ⚙️
 
