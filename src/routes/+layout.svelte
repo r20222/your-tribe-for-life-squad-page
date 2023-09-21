@@ -1,6 +1,4 @@
-<main>
-	<slot />
-</main>
+<slot />
 
 <script>
     import { onNavigate } from '$app/navigation'
