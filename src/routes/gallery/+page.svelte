@@ -32,8 +32,8 @@
 					<img
 						src={item.squad_b.data.picture.url}
 						alt="Profile picture of Squad B"
-						width="100"
-						height="100"
+						width="200"
+						height="200"
 					/>
 				{/if}
 
@@ -47,9 +47,19 @@
 	<pre>{JSON.stringify(data, null, 2)}</pre>
 </div> -->
 
-<!-- <style>
-	.name {
-		color: blueviolet;
-		font-size: 3em;
+<style>
+	.squad {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		margin-left: 6em;
+		margin-top: 5em;
+		padding: 1em;
 	}
-</style> -->
+
+	.name {
+		color: whitesmoke;
+		font-size: 1em;
+		padding: 1em;
+		margin-left: 1.5em;
+	}
+</style>
