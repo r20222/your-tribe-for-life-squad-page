@@ -38,7 +38,7 @@ onMount(() => {
 <header class="desktop">
     <section class="nav">
         <a href="#" class="active">Home</a>
-        <a href="#">Squad A</a>
+        <a href="#">Squad B</a>
     </section>
     <section class="profile">
         <span class="icon">
