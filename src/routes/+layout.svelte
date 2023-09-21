@@ -2,31 +2,35 @@
 	<slot />
 </main>
 
-<style>
-	:global(*) {
+<!-- Stijlsectie -->
+<style> 
+:global(*) {
 		box-sizing: border-box;
 		margin: 0;
 		padding: 0;
 	}
-	/* main {
-    margin: auto;
+	/* Stijl voor het hoofdelement van de pagina */
+	main {
+	margin: auto;
     overflow: auto;
-    background: linear-gradient(315deg, rgb(0, 2, 58) 3%, rgb(0, 23, 47) 38%, rgb(6, 0, 49) 68%, rgb(0, 7, 58) 98%);
-    animation: gradient 15s ease infinite;
-    background-attachment: fixed;
+	background: linear-gradient(-45deg, #000000, #000450, rgb(3, 0, 41), #000450);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
     width: 100VW;
     height: 100VH;
-} */
-
-	@keyframes gradient {
-		0% {
-			background-position: 0% 0%;
-		}
-		50% {
-			background-position: 100% 100%;
-		}
-		100% {
-			background-position: 0% 0%;
-		}
-	}
-</style>
+  }
+   /* Definitie van de achtergrondanimatie met behulp van keyframes */
+  @keyframes gradient {
+	  0% {
+		  background-position: 0% 50%;
+	  }
+	  50% {
+		  background-position: 100% 50%;
+	  }
+	  100% {
+		  background-position: 0% 50%;
+	  }
+  }
+  </style>
+  
+  
