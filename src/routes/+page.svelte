@@ -2,20 +2,32 @@
     export let data
   </script>
 
+   <main>
     <div>
-       <div class="wave"></div>
-       <div class="wave"></div>
-       <div class="wave"></div>
-       </div>
-       <div class="image">
-       <a href="/login"><img src="icons8-playstation-250.svg" alt="Logo PS5" style="width:120px;height:120px;"></a>
-    </div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        </div>
+        <div class="image">
+        <a href="/login"><img src="icons8-playstation-250.svg" alt="Logo PS5" style="width:120px;height:120px;"></a>
+     </div>
+   </main>
 
     <style>
 
 *{
 margin: 0;
 padding: 0;
+}
+
+main {
+    margin: auto;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(3, 5, 53) 3%, rgb(1, 32, 64) 38%, rgb(16, 13, 39) 68%, rgb(5, 10, 51) 98%);
+    animation: gradient 15s ease infinite;
+    background-attachment: fixed;
+    width: 100VW;
+    height: 100VH;
 }
 
 @keyframes gradient {

@@ -1,5 +1,6 @@
 <script>
 import { onMount } from 'svelte';
+import { page } from '$app/stores' ;
 
 let time = new Date();
 let shownav = false;
@@ -37,8 +38,8 @@ onMount(() => {
 
 <header class="desktop">
     <section class="nav">
-        <a href="#" class="active">Home</a>
-        <a href="#">Squad B</a>
+        <a href="/home" class:active={$page.url.pathname === '/home'}>Home</a>
+        <a href="/gallery" class:active={$page.url.pathname === '/gallery'}>Squad B</a>
     </section>
     <section class="profile">
         <span class="icon">

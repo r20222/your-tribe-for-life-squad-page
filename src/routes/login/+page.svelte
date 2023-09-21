@@ -31,7 +31,7 @@
 <style> 
 
   /* Stijl voor het hoofdelement van de pagina */
-  main {
+  /* main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -41,7 +41,7 @@
   background: linear-gradient(-45deg, #000000, #1b1b1b, #1b1b1b, #212121);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-}
+} */
  /* Definitie van de achtergrondanimatie met behulp van keyframes */
 @keyframes gradient {
 	0% {
@@ -55,4 +55,3 @@
 	}
 }
 </style>
-
