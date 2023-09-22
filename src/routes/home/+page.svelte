@@ -60,6 +60,7 @@
 	.game-nav {
         display: flex;
 		overflow: hidden;
+
     }
 
     a {
@@ -101,6 +102,10 @@
 		border: 2px solid #576170;
 	}
 
+	.shownav ~ .active {
+		z-index: -1;
+	}
+
 	.game span {
 		display: none;
 	}
@@ -121,7 +126,7 @@
 	}
 
 	.info {
-		width: 50%;
+		width: 100%;
 		margin-bottom: 3rem;
 	}
 
@@ -149,6 +154,14 @@
     }
 	.active span {
 		display: none;
+	}
+
+	.active {
+		position: inherit;
+	}
+
+	.info {
+		width: 100%;
 	}
 
     }

@@ -209,6 +209,18 @@
 		display: none;
 	}
 
+	.active {
+		position: inherit;
+	}
+
+	.info {
+		width: 100%;
+	}
+
+	.active-item P {
+		font-size: 1em;
+	}
+
     }
 
 </style>
