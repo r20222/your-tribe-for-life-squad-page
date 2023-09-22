@@ -84,6 +84,7 @@
 @media screen and (max-width: 900px) {
         .members {
 			grid-template-columns: repeat(2, 1fr);
+			margin-top: 1em;
     }
 	a {
 		margin-left: 1.5em;

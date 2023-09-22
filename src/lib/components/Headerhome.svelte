@@ -71,8 +71,8 @@ onMount(() => {
 
 <nav class:shownav>
     <section class="mobile-nav">
-        <a href="#">Squad A</a>
-        <a href="#">Squad B</a>
+        <a href="/home">Home</a>
+        <a href="/gallery">Squad B</a>
     </section>
 </nav>
 
